@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive layout</title>
+    <style>
+      body {
+        width: auto;
+        margin: 0;
+      }
+
+      .section-1 {
+        margin: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5%;
+        height: 25vw;
+      }
+      h1 {
+        text-align: center;
+        color: rgb(54, 36, 3);
+        font-size: 2rem;
+      }
+
+      .box {
+        border: 1px solid orange;
+        border-radius: 10px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        display: flex;
+        box-shadow: 0 8px 20px gray;
+      }
+      .box-1 {
+        background-color: aliceblue;
+      }
+      .box-2 {
+        background-color: bisque;
+      }
+
+      @media screen and (max-width: 575px) {
+        .section-1 {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>This is Responsive Layout box</h1>
+    </header>
+    <main>
+      <!-- section 1  -->
+      <section class="section-1">
+        <div class="box box-1"><h2>Amar sonar bangal</h2></div>
+        <div class="box box-2"><h2>Ami tomay valobsi</h2></div>
+      </section>
+    </main>
+  </body>
+</html>
